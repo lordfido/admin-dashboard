@@ -1,9 +1,9 @@
 import React, { PropsWithChildren } from 'react';
-import { Body1, Title1 } from './styles';
+import { Body1, Title1, Title2 } from './styles';
 
 interface Props {
   className?: string;
-  type: 'title1' | 'body1';
+  type: 'title1' | 'title2' | 'body1';
 }
 
 const Text = ({ children, className, type = 'body1' }: PropsWithChildren<Props>): JSX.Element => {
@@ -11,6 +11,10 @@ const Text = ({ children, className, type = 'body1' }: PropsWithChildren<Props>)
   switch (type) {
     case 'title1':
       Component = Title1;
+      break;
+
+    case 'title2':
+      Component = Title2;
       break;
 
     default:

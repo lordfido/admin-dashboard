@@ -9,6 +9,12 @@ export const Title1 = styled.h1`
 `;
 Title1.displayName = 'Title1';
 
+export const Title2 = styled.h2`
+  font-size: 20px;
+  margin: 12px 0px;
+`;
+Title2.displayName = 'Title2';
+
 export const Body1 = styled.p`
   font-size: 16px;
   margin-bottom: 12px;
