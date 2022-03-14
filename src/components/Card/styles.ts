@@ -6,6 +6,8 @@ export const CardWrapper = styled.div`
   border-radius: 4px;
   box-shadow: 0px 0px 15px 1px ${ CARD_SHADOW };
   color: ${ CARD_COLOR };
+  display: flex;
+  flex-direction: column;
 `;
 CardWrapper.displayName = 'CardWrapper';
 
@@ -18,6 +20,11 @@ export const CardHeading = styled.div`
 CardHeading.displayName = 'CardHeading';
 
 export const CardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
   padding: 12px 16px;
+  width: 100%;
 `;
 CardContent.displayName = 'CardContent';
