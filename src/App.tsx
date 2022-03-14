@@ -2,6 +2,8 @@ import React, { useEffect, useMemo } from 'react';
 import { Provider, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
+import GuestLayout from './components/Layout/GuestLayout';
+import MainLayout from './components/Layout/MainLayout';
 import { DASHBOARD, ROOT } from './constants/clientRoutes';
 import { guestRoutes, userRoutes } from './routes';
 import { configureStore } from './store';
@@ -10,7 +12,16 @@ import { isLoggedUser } from './store/selectors';
 const ConnectedApp = (): JSX.Element => {
   const navigate = useNavigate();
   const isLogged = useSelector(isLoggedUser);
-  const routes = useMemo(() => isLogged ? userRoutes : guestRoutes, [isLogged]);
+  const { Layout, routes } = useMemo(() => isLogged
+    ? {
+      Layout: MainLayout,
+      routes: userRoutes
+    }
+    : {
+      Layout: GuestLayout,
+      routes: guestRoutes
+    },
+  [isLogged]);
 
   useEffect(() => {
     if (isLogged) {
@@ -21,7 +32,7 @@ const ConnectedApp = (): JSX.Element => {
   }, [isLogged, navigate]);
   
   return (
-    <div className="App">
+    <Layout>
       <Routes>
         { routes.map(route => (
           <Route
@@ -31,7 +42,7 @@ const ConnectedApp = (): JSX.Element => {
           />
         )) }
       </Routes>
-    </div>
+    </Layout>
   );
 };
 
