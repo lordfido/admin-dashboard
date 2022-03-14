@@ -2,10 +2,11 @@ import React, { PropsWithChildren } from 'react';
 import { Body1, Title1 } from './styles';
 
 interface Props {
+  className?: string;
   type: 'title1' | 'body1';
 }
 
-const Text = ({ children, type = 'body1' }: PropsWithChildren<Props>): JSX.Element => {
+const Text = ({ children, className, type = 'body1' }: PropsWithChildren<Props>): JSX.Element => {
   let Component = Body1;
   switch (type) {
     case 'title1':
@@ -16,7 +17,7 @@ const Text = ({ children, type = 'body1' }: PropsWithChildren<Props>): JSX.Eleme
   }
 
   return (
-    <Component>
+    <Component className={ ['Text', className].join(' ') }>
       { children }
     </Component>
   );

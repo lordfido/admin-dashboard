@@ -4,7 +4,7 @@ import { TITLE_BORDER } from '../../constants/styles/skin';
 export const Title1 = styled.h1`
   border-bottom: 1px solid ${ TITLE_BORDER };
   font-size: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   padding-bottom: 12px;
 `;
 Title1.displayName = 'Title1';
