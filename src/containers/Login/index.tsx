@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import Button from '../../components/Button';
 import Form from '../../components/Forms/Form';
 import Input from '../../components/Forms/Input';
+import GuestLayout from '../../components/Layout/GuestLayout';
 import Text from '../../components/Text';
 import { loginAction } from '../../store/actions';
 import { LoginWrapper } from './styles';
@@ -26,32 +27,34 @@ const Login = (): JSX.Element => {
   };
 
   return (
-    <LoginWrapper className="Login">
-      <Text type="title1">Sign In</Text>
+    <GuestLayout>
+      <LoginWrapper className="Login">
+        <Text type="title1">Sign In</Text>
 
-      <Form onSubmit={ onSubmit }>
-        <Input
-          defaultValue={ email }
-          id="LoginForm-email"
-          onChange={ onChangeEmail }
-        >
-          Email
-        </Input>
+        <Form onSubmit={ onSubmit }>
+          <Input
+            defaultValue={ email }
+            id="LoginForm-email"
+            onChange={ onChangeEmail }
+          >
+            Email
+          </Input>
 
-        <Input
-          defaultValue={ password }
-          id="LoginForm-password"
-          onChange={ onChangePassword }
-          type="password"
-        >
-          Password
-        </Input>
+          <Input
+            defaultValue={ password }
+            id="LoginForm-password"
+            onChange={ onChangePassword }
+            type="password"
+          >
+            Password
+          </Input>
 
-        <Button type="submit">
-          Sign In
-        </Button>
-      </Form>
-    </LoginWrapper>
+          <Button type="submit">
+            Sign In
+          </Button>
+        </Form>
+      </LoginWrapper>
+    </GuestLayout>
   );
 };
 
