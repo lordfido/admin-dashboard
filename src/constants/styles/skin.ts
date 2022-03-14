@@ -22,3 +22,6 @@ export const INPUT_FIELD_COLOR = GREY_800;
 
 export const GUEST_BG = ORANGE_100;
 export const GUEST_BG_GRADIENT = `linear-gradient(135deg, ${ ORANGE_100 }FF 0%, ${ ORANGE_50 }FF 100%)`;
+
+export const USER_NAME_COLOR = BLACK;
+export const USER_ROLE_COLOR = GREY_800;

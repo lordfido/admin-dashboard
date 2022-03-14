@@ -17,7 +17,6 @@ code {
 *::before,
 *::after {
   box-sizing: border-box;
-  letter-spacing: 0.05em;
 }
 
 /* Remove default margin */
