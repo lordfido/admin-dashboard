@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo } from 'react';
 import { Provider, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import './App.css';
 import GuestLayout from './components/Layout/GuestLayout';
 import MainLayout from './components/Layout/MainLayout';
 import { DASHBOARD, ROOT } from './constants/clientRoutes';
