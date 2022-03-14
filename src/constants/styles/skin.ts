@@ -1,7 +1,10 @@
-import { BLACK, GREY_500, GREY_800, ORANGE_100, ORANGE_300, ORANGE_400, WHITE } from './colors';
+import { BLACK, GREY_100, GREY_500, GREY_800, ORANGE_100, ORANGE_300, ORANGE_400, WHITE } from './colors';
+
+export const TITLE_BORDER = GREY_100;
 
 export const CARD_BG = WHITE;
 export const CARD_COLOR = GREY_800;
+export const CARD_SHADOW = `${ BLACK }2`;
 export const CARD_HEADING_BG = ORANGE_300;
 export const CARD_HEADING_COLOR = BLACK;
 

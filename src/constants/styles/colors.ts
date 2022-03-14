@@ -1,5 +1,6 @@
 export const WHITE = '#FFF';
 
+export const GREY_100 = '#EBECEE';
 export const GREY_500 = '#ADAFAF';
 export const GREY_800 = '#3E4242';
 
