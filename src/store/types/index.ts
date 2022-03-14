@@ -1,3 +1,4 @@
+export * from './user';
 
 export interface UserState {
   email?: string;

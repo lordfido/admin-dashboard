@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Button from '../../components/Button';
 import Form from '../../components/Forms/Form';
 import Input from '../../components/Forms/Input';
 import Text from '../../components/Text';
+import { loginAction } from '../../store/actions';
 import { LoginWrapper } from './styles';
 
 const Login = (): JSX.Element => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
 
   const onChangeEmail = (newValue: string) => {
     setEmail(newValue);
@@ -19,9 +22,7 @@ const Login = (): JSX.Element => {
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    
-    // eslint-disable-next-line no-console
-    console.log({ email, password });
+    dispatch(loginAction(email, password));
   };
 
   return (

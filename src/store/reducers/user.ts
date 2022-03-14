@@ -1,9 +1,14 @@
-import { AnyAction } from 'redux';
 import { getUserInitialState } from '../models/user';
-import { UserState } from '../types';
+import { LoginAction, UserState } from '../types';
 
-const reducer = (state = getUserInitialState(), action: AnyAction): UserState => {
+const reducer = (state = getUserInitialState(), action: LoginAction): UserState => {
   switch (action.type) {
+    case 'LOGIN_SUCCESS':
+      return {
+        ...state,
+        ...action.payload
+      };
+
     default:
       return state;
   }
