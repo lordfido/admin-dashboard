@@ -1,7 +1,7 @@
-import { rest } from 'msw';
+import { HttpMethod } from '../types';
 
 interface ServerRoute {
-  method: Exclude<keyof typeof rest, 'all' | 'head' | 'options'>;
+  method: HttpMethod;
   path: string;
 }
 
