@@ -1,9 +1,6 @@
-export * from './user';
+import { UserState } from './user';
 
-export interface UserState {
-  email?: string;
-  userName?: string;
-}
+export * from './user';
 
 export interface RootState {
   user: UserState;
