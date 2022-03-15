@@ -9,8 +9,8 @@ import { loginAction } from '../../store/actions';
 import { LoginWrapper } from './styles';
 
 const Login = (): JSX.Element => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('mranderson@google.com');
+  const [password, setPassword] = useState('mranderson');
   const dispatch = useDispatch();
 
   const onChangeEmail = (newValue: string) => {
