@@ -18,7 +18,6 @@ export const createRepositoryFromServer = ({
   topics,
   updated_at,
   watchers_count
-
 }: RepositoryFromServer): Repository => ({
   created_at,
   forks,

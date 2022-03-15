@@ -15,8 +15,6 @@ const ConnectedApp = (): JSX.Element => {
   [isLogged]);
 
   useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log('Navigate has been updated');
     if (isLogged) {
       navigate(DASHBOARD);
     } else {

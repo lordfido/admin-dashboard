@@ -8,7 +8,7 @@
     "build": "react-scripts build",
     "types": "tsc --noEmit",
     "lint": "eslint",
-    "test": "react-scripts test --verbose --watchAll=false",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
   },
   "dependencies": {
