@@ -6,6 +6,7 @@ interface Role {
 }
 
 export interface UserState {
+  id?: number;
   email?: string;
   userName?: string;
   role?: Role;

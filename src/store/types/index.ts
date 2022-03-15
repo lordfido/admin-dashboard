@@ -8,3 +8,7 @@ export interface RootState {
   repositories: RepositoriesState;
   user: UserState;
 }
+
+export interface LoginResponse {
+  access_token: string;
+}
